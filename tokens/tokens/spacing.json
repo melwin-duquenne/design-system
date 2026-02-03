@@ -1,0 +1,36 @@
+{
+	"spacing": {
+		"0": {
+			"$type": "spacing",
+			"$value": "0px"
+		},
+		"lg": {
+			"$type": "spacing",
+			"$value": "24px"
+		},
+		"md": {
+			"$type": "spacing",
+			"$value": "16px"
+		},
+		"sm": {
+			"$type": "spacing",
+			"$value": "8px"
+		},
+		"xl": {
+			"$type": "spacing",
+			"$value": "32px"
+		},
+		"xs": {
+			"$type": "spacing",
+			"$value": "4px"
+		},
+		"2xl": {
+			"$type": "spacing",
+			"$value": "40px"
+		},
+		"3xl": {
+			"$type": "spacing",
+			"$value": "64px"
+		}
+	}
+}

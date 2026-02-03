@@ -1,0 +1,28 @@
+[
+	{
+		"name": "dark",
+		"group": "color mode",
+		"selectedTokenSets": {
+			"color/base": "enabled",
+			"color/dark": "enabled",
+			"radius": "enabled",
+			"shadows": "enabled",
+			"spacing": "enabled",
+			"typography": "enabled",
+			"color/status": "enabled"
+		}
+	},
+	{
+		"name": "light",
+		"group": "color mode",
+		"selectedTokenSets": {
+			"color/base": "enabled",
+			"color/light": "enabled",
+			"radius": "enabled",
+			"shadows": "enabled",
+			"spacing": "enabled",
+			"typography": "enabled",
+			"color/status": "enabled"
+		}
+	}
+]

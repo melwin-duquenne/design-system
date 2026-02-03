@@ -1,0 +1,66 @@
+{
+	"typography": {
+		"body": {
+			"md": {
+				"$type": "typography",
+				"$value": {
+					"fontSize": "16px",
+					"fontFamily": "{typography.font.family.base}",
+					"fontWeight": "{typography.weight.regular}",
+					"lineHeight": "24px"
+				}
+			},
+			"sm": {
+				"$type": "typography",
+				"$value": {
+					"fontSize": "14px",
+					"fontFamily": "{typography.font.family.base}",
+					"fontWeight": "{typography.weight.regular}",
+					"lineHeight": "20px"
+				}
+			}
+		},
+		"font": {
+			"family": {
+				"base": {
+					"$type": "fontFamilies",
+					"$value": "Roboto"
+				}
+			}
+		},
+		"weight": {
+			"bold": {
+				"$type": "fontWeights",
+				"$value": "700"
+			},
+			"medium": {
+				"$type": "fontWeights",
+				"$value": "500"
+			},
+			"regular": {
+				"$type": "fontWeights",
+				"$value": "400"
+			}
+		},
+		"heading": {
+			"h1": {
+				"$type": "typography",
+				"$value": {
+					"fontSize": "32px",
+					"fontFamily": "{typography.font.family.base}",
+					"fontWeight": "{typography.weight.bold}",
+					"lineHeight": "40px"
+				}
+			},
+			"h2": {
+				"$type": "typography",
+				"$value": {
+					"fontSize": "24px",
+					"fontFamily": "{typography.font.family.base}",
+					"fontWeight": "{typography.weight.bold}",
+					"lineHeight": "32px"
+				}
+			}
+		}
+	}
+}

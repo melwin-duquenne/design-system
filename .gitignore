@@ -23,7 +23,7 @@ coverage
 *.njsproj
 *.sln
 *.sw?
-
+.env
 *.tsbuildinfo
 
 .eslintcache
@@ -37,3 +37,7 @@ __screenshots__/
 
 # Vite
 *.timestamp-*-*.mjs
+nul
+
+# Environment variables
+.env

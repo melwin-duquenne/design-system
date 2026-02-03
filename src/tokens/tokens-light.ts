@@ -1,0 +1,53 @@
+/**
+ * Do not edit directly, this file was auto-generated.
+ */
+
+export const colorBrandBlue = "#3b82f6";
+export const colorBrandOrange = "#f97316";
+export const colorNeutral50 = "#fafafa";
+export const colorNeutral100 = "#f5f5f5";
+export const colorNeutral200 = "#e5e5e5";
+export const colorNeutral300 = "#d4d4d4";
+export const colorNeutral400 = "#a3a3a3";
+export const colorNeutral500 = "#737373";
+export const colorNeutral600 = "#525252";
+export const colorNeutral700 = "#404040";
+export const colorNeutral800 = "#262626";
+export const colorNeutral900 = "#171717";
+export const colorNeutralWhite = "#ffffff";
+export const colorTextPrimary = "#171717";
+export const colorTextSecondary = "#525252";
+export const colorActionPrimary = "#f97316";
+export const colorActionSecondary = "#3b82f6";
+export const colorBorderDefault = "#e5e5e5";
+export const colorBackgroundPrimary = "#ffffff";
+export const colorBackgroundSecondary = "#fafafa";
+export const colorStatusInfo = "#3b82f6";
+export const colorStatusError = "#ef4444";
+export const colorStatusSuccess = "#22c55e";
+export const colorStatusWarning = "#eab308";
+export const radiusLg = "16px";
+export const radiusMd = "8px";
+export const radiusSm = "4px";
+export const radiusXl = "24px";
+export const radiusFull = "9999px";
+export const radiusNone = "0px";
+export const shadowLg = "0 10px 16px 0 rgba(0, 0, 0, 0.15)";
+export const shadowMd = "0 4px 8px 0 rgba(0, 0, 0, 0.1)";
+export const shadowSm = "0 1px 2px 0 rgba(0, 0, 0, 0.05)";
+export const spacing0 = "0px";
+export const spacingLg = "24px";
+export const spacingMd = "16px";
+export const spacingSm = "8px";
+export const spacingXl = "32px";
+export const spacingXs = "4px";
+export const spacing2xl = "40px";
+export const spacing3xl = "64px";
+export const typographyBodyMd = "400 16px/24px Roboto";
+export const typographyBodySm = "400 14px/20px Roboto";
+export const typographyFontFamilyBase = "Roboto";
+export const typographyWeightBold = "700";
+export const typographyWeightMedium = "500";
+export const typographyWeightRegular = "400";
+export const typographyHeadingH1 = "700 32px/40px Roboto";
+export const typographyHeadingH2 = "700 24px/32px Roboto";

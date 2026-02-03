@@ -1,0 +1,34 @@
+{
+	"shadow": {
+		"lg": {
+			"$type": "boxShadow",
+			"$value": {
+				"x": "0",
+				"y": "10",
+				"blur": "16",
+				"color": "rgba(0, 0, 0, 0.15)",
+				"spread": "0"
+			}
+		},
+		"md": {
+			"$type": "boxShadow",
+			"$value": {
+				"x": "0",
+				"y": "4",
+				"blur": "8",
+				"color": "rgba(0, 0, 0, 0.1)",
+				"spread": "0"
+			}
+		},
+		"sm": {
+			"$type": "boxShadow",
+			"$value": {
+				"x": "0",
+				"y": "1",
+				"blur": "2",
+				"color": "rgba(0, 0, 0, 0.05)",
+				"spread": "0"
+			}
+		}
+	}
+}

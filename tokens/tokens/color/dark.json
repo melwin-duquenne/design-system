@@ -1,0 +1,40 @@
+{
+	"color": {
+		"text": {
+			"primary": {
+				"$type": "color",
+				"$value": "{color.neutral.white}"
+			},
+			"secondary": {
+				"$type": "color",
+				"$value": "{color.neutral.50}"
+			}
+		},
+		"action": {
+			"primary": {
+				"$type": "color",
+				"$value": "{color.brand.orange}"
+			},
+			"secondary": {
+				"$type": "color",
+				"$value": "{color.brand.blue}"
+			}
+		},
+		"border": {
+			"default": {
+				"$type": "color",
+				"$value": "{color.neutral.600}"
+			}
+		},
+		"background": {
+			"primary": {
+				"$type": "color",
+				"$value": "{color.neutral.900}"
+			},
+			"secondary": {
+				"$type": "color",
+				"$value": "{color.neutral.600}"
+			}
+		}
+	}
+}

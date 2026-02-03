@@ -8,17 +8,23 @@
     "build": "run-p type-check \"build-only {@}\" --",
     "preview": "vite preview",
     "build-only": "vite build",
-    "type-check": "vue-tsc --build"
+    "type-check": "vue-tsc --build",
+    "tokens:pull": "npx tokensstudio pull",
+    "tokens:build": "node sd.build.js",
+    "tokens:sync": "npm run tokens:pull && npm run tokens:build"
   },
   "dependencies": {
     "vue": "^3.5.27"
   },
   "devDependencies": {
+    "@tokens-studio/sd-transforms": "^2.0.3",
+    "@tokens-studio/sdk": "^3.0.1",
     "@tsconfig/node24": "^24.0.4",
     "@types/node": "^24.10.9",
     "@vitejs/plugin-vue": "^6.0.3",
     "@vue/tsconfig": "^0.8.1",
     "npm-run-all2": "^8.0.4",
+    "style-dictionary": "^5.2.0",
     "typescript": "~5.9.3",
     "vite": "beta",
     "vite-plugin-vue-devtools": "^8.0.5",

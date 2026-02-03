@@ -1,0 +1,28 @@
+{
+	"radius": {
+		"lg": {
+			"$type": "borderRadius",
+			"$value": "16px"
+		},
+		"md": {
+			"$type": "borderRadius",
+			"$value": "8px"
+		},
+		"sm": {
+			"$type": "borderRadius",
+			"$value": "4px"
+		},
+		"xl": {
+			"$type": "borderRadius",
+			"$value": "24px"
+		},
+		"full": {
+			"$type": "borderRadius",
+			"$value": "9999px"
+		},
+		"none": {
+			"$type": "borderRadius",
+			"$value": "0px"
+		}
+	}
+}
