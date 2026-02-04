@@ -118,16 +118,6 @@ Les tokens TypeScript peuvent etre importes :
 import { ColorTextPrimary, SpacingMd } from '@/tokens/tokens-light';
 ```
 
-### Tokens d'accessibilite
-
-Trois tokens garantissent un contraste WCAG AA (ratio >= 4.5:1) :
-
-| Token | Usage | Light | Dark |
-|-------|-------|-------|------|
-| `--color-action-text-primary` | Texte orange sur fond clair | `#c2410c` | `#fb923c` |
-| `--color-action-text-secondary` | Texte bleu sur fond clair | `#1d4ed8` | `#93c5fd` |
-| `--color-action-accessible-secondary` | Fond bleu avec texte blanc | `#2563eb` | `#3b82f6` |
-
 ### CI/CD
 
 Le workflow GitHub Actions (`.github/workflows/build-tokens.yml`) peut etre declenche :
