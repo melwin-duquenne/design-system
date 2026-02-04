@@ -13,6 +13,9 @@ html.dark {
   --color-background-primary: var(--color-neutral-900);
   --color-background-secondary: var(--color-neutral-600);
   --color-border-default: var(--color-neutral-600);
+  --color-action-text-primary: var(--color-brand-orange-50);
+  --color-action-text-secondary: var(--color-brand-blue-50);
+  --color-action-accessible-secondary: var(--color-brand-blue-200);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -22,6 +25,9 @@ html.dark {
     --color-background-primary: var(--color-neutral-900);
     --color-background-secondary: var(--color-neutral-600);
     --color-border-default: var(--color-neutral-600);
+    --color-action-text-primary: var(--color-brand-orange-50);
+    --color-action-text-secondary: var(--color-brand-blue-50);
+    --color-action-accessible-secondary: var(--color-brand-blue-200);
   }
 }
 

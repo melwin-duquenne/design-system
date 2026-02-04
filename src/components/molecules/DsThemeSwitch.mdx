@@ -1,0 +1,28 @@
+import { Meta, Canvas, Controls, ArgTypes } from '@storybook/addon-docs/blocks'
+import * as DsThemeSwitchStories from './DsThemeSwitch.stories'
+
+<Meta of={DsThemeSwitchStories} />
+
+# DsThemeSwitch
+
+Interrupteur de theme clair/sombre. Combine `DsToggle` et `DsTypography` avec une icone dynamique. Bascule la classe `dark` sur `<html>`.
+
+## Apercu
+
+<Canvas of={DsThemeSwitchStories.Default} />
+
+## Utilisation
+
+```vue
+<DsThemeSwitch />
+```
+
+## Accessibilite
+
+- Utilise un `DsToggle` accessible au clavier.
+- L'icone est decorative (`aria-hidden="true"`).
+
+## Guidelines
+
+- **Do** : Placer le theme switch dans le header ou la barre de navigation.
+- **Don't** : Ne pas proposer plusieurs theme switches sur la meme page.

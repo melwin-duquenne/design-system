@@ -1,0 +1,44 @@
+import { Meta, Canvas, Controls, ArgTypes } from '@storybook/addon-docs/blocks'
+import * as DsSearchBarStories from './DsSearchBar.stories'
+
+<Meta of={DsSearchBarStories} />
+
+# DsSearchBar
+
+Barre de recherche composee d'un `DsInput` et d'un `DsButton`. Emet un evenement `search` au clic ou a l'appui sur Entree.
+
+## Apercu
+
+<Canvas of={DsSearchBarStories.Default} />
+
+## Avec placeholder personnalise
+
+<Canvas of={DsSearchBarStories.WithPlaceholder} />
+
+## Interactive
+
+<Canvas of={DsSearchBarStories.Interactive} />
+
+## Props
+
+<ArgTypes of={DsSearchBarStories} />
+
+## Utilisation
+
+```vue
+<DsSearchBar
+  v-model="query"
+  placeholder="Rechercher..."
+  @search="handleSearch"
+/>
+```
+
+## Accessibilite
+
+- Le champ de saisie est navigable au clavier.
+- La recherche peut etre declenchee avec la touche Entree.
+
+## Guidelines
+
+- **Do** : Fournir un placeholder explicite.
+- **Don't** : Ne pas utiliser cette barre pour des filtres complexes necessitant plusieurs champs.

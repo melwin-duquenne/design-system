@@ -1,0 +1,43 @@
+import { Meta, Canvas, Controls, ArgTypes } from '@storybook/addon-docs/blocks'
+import * as DsSpinnerStories from './DsSpinner.stories'
+
+<Meta of={DsSpinnerStories} />
+
+# DsSpinner
+
+Indicateur de chargement anime. Disponible en trois tailles.
+
+## Apercu
+
+<Canvas of={DsSpinnerStories.Medium} />
+
+## Props
+
+<ArgTypes of={DsSpinnerStories} />
+
+## Tailles
+
+### Small (16px)
+
+<Canvas of={DsSpinnerStories.Small} />
+
+### Medium (24px)
+
+<Canvas of={DsSpinnerStories.Medium} />
+
+### Large (40px)
+
+<Canvas of={DsSpinnerStories.Large} />
+
+## Accessibilite
+
+- Utilise `role="status"` pour indiquer le chargement aux technologies d'assistance.
+- Ajouter un texte visuellement cache (sr-only) pour decrire l'etat de chargement dans le contexte parent.
+
+## Guidelines
+
+| Do | Don't |
+|---|---|
+| Utiliser `sm` pour les boutons et elements inline | Afficher un spinner sans contexte |
+| Utiliser `lg` pour les zones de contenu principales | Laisser un spinner indefiniment sans timeout |
+| Accompagner d'un message textuel si necessaire | Utiliser plusieurs spinners simultanement |

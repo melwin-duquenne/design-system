@@ -1,0 +1,35 @@
+import { Meta, Canvas, Controls, ArgTypes } from '@storybook/addon-docs/blocks'
+import * as DsInputGroupStories from './DsInputGroup.stories'
+
+<Meta of={DsInputGroupStories} />
+
+# DsInputGroup
+
+Champ de saisie avec label associe. Combine `DsTypography` et `DsInput` dans un layout vertical.
+
+## Apercu
+
+<Canvas of={DsInputGroupStories.Default} />
+
+## Avec valeur
+
+<Canvas of={DsInputGroupStories.WithValue} />
+
+## Props
+
+<ArgTypes of={DsInputGroupStories} />
+
+## Utilisation
+
+```vue
+<DsInputGroup label="Email" placeholder="nom@exemple.com" v-model="email" />
+```
+
+## Accessibilite
+
+- Le label est affiche visuellement au-dessus du champ. Pour une association programmatique, ajoutez un `id` au `DsInput` et un `for` sur le label si necessaire.
+
+## Guidelines
+
+- **Do** : Toujours fournir un `label` descriptif.
+- **Don't** : Ne pas utiliser un placeholder comme seul indicateur du champ.

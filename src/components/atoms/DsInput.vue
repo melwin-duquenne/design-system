@@ -3,6 +3,7 @@ defineProps<{
   placeholder?: string
   disabled?: boolean
   modelValue?: string
+  ariaLabel?: string
 }>()
 
 defineEmits<{
@@ -16,6 +17,7 @@ defineEmits<{
     type="text"
     :placeholder="placeholder"
     :disabled="disabled"
+    :aria-label="ariaLabel"
     :value="modelValue"
     @input="$emit('update:modelValue', ($event.target as HTMLInputElement).value)"
   />

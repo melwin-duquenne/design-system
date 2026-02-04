@@ -1,0 +1,45 @@
+import { Meta, Canvas, Controls, ArgTypes } from '@storybook/addon-docs/blocks'
+import * as DsCardStories from './DsCard.stories'
+
+<Meta of={DsCardStories} />
+
+# DsCard
+
+Conteneur avec fond, bordure et ombre. Utilise les tokens de couleur, radius et shadow du Design System.
+
+## Apercu
+
+<Canvas of={DsCardStories.Default} />
+
+## Variantes d'ombre
+
+### Shadow Small
+<Canvas of={DsCardStories.ShadowSm} />
+
+### Shadow Medium
+<Canvas of={DsCardStories.ShadowMd} />
+
+### Shadow Large
+<Canvas of={DsCardStories.ShadowLg} />
+
+## Props
+
+<ArgTypes of={DsCardStories} />
+
+## Utilisation
+
+```vue
+<DsCard shadow="md">
+  <p>Contenu de la carte</p>
+</DsCard>
+```
+
+## Accessibilite
+
+- Le composant utilise un `<div>` generique. Ajoutez un `role` ou une balise semantique si necessaire selon le contexte.
+
+## Guidelines
+
+- **Do** : Utiliser `shadow="sm"` pour les cartes de contenu standard.
+- **Do** : Utiliser `shadow="lg"` pour mettre en avant un element important.
+- **Don't** : Ne pas imbriquer plusieurs cartes les unes dans les autres.

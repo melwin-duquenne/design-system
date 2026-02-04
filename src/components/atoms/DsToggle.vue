@@ -1,6 +1,7 @@
 <script setup lang="ts">
 defineProps<{
   modelValue?: boolean
+  ariaLabel?: string
 }>()
 
 defineEmits<{
@@ -14,6 +15,7 @@ defineEmits<{
     :class="{ 'ds-toggle--active': modelValue }"
     role="switch"
     :aria-checked="modelValue"
+    :aria-label="ariaLabel ?? 'Toggle'"
     @click="$emit('update:modelValue', !modelValue)"
   >
     <span class="ds-toggle__thumb" />

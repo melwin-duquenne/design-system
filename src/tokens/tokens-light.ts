@@ -2,8 +2,12 @@
  * Do not edit directly, this file was auto-generated.
  */
 
-export const colorBrandBlue = "#3b82f6";
-export const colorBrandOrange = "#f97316";
+export const colorBrandBlue50 = "#93c5fd";
+export const colorBrandBlue200 = "#3b82f6";
+export const colorBrandBlue550 = "#2563eb";
+export const colorBrandBlue900 = "#1d4ed8";
+export const colorBrandOrange50 = "#fb923c";
+export const colorBrandOrange900 = "#c2410c";
 export const colorNeutral50 = "#fafafa";
 export const colorNeutral100 = "#f5f5f5";
 export const colorNeutral200 = "#e5e5e5";
@@ -17,8 +21,11 @@ export const colorNeutral900 = "#171717";
 export const colorNeutralWhite = "#ffffff";
 export const colorTextPrimary = "#171717";
 export const colorTextSecondary = "#525252";
-export const colorActionPrimary = "#f97316";
+export const colorActionTextPrimary = "#c2410c";
+export const colorActionTextSecondary = "#1d4ed8";
+export const colorActionPrimary = "#fb923c";
 export const colorActionSecondary = "#3b82f6";
+export const colorActionAccessibleSecondary = "#2563eb";
 export const colorBorderDefault = "#e5e5e5";
 export const colorBackgroundPrimary = "#ffffff";
 export const colorBackgroundSecondary = "#fafafa";

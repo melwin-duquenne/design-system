@@ -2,12 +2,36 @@
 	"color": {
 		"brand": {
 			"blue": {
-				"$type": "color",
-				"$value": "#3b82f6"
+				"50": {
+					"$type": "color",
+					"$value": "#93c5fd"
+				},
+				"200": {
+					"$type": "color",
+					"$value": "#3b82f6",
+					"$description": ""
+				},
+				"550": {
+					"$type": "color",
+					"$value": "#2563eb",
+					"$description": ""
+				},
+				"900": {
+					"$type": "color",
+					"$value": "#1d4ed8",
+					"$description": ""
+				}
 			},
 			"orange": {
-				"$type": "color",
-				"$value": "#f97316"
+				"50": {
+					"$type": "color",
+					"$value": "#fb923c"
+				},
+				"900": {
+					"$type": "color",
+					"$value": "#c2410c",
+					"$description": ""
+				}
 			}
 		},
 		"neutral": {

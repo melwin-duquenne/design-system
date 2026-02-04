@@ -1,0 +1,40 @@
+import { Meta, Canvas, Controls, ArgTypes } from '@storybook/addon-docs/blocks'
+import * as DsNavItemStories from './DsNavItem.stories'
+
+<Meta of={DsNavItemStories} />
+
+# DsNavItem
+
+Element de navigation. Affiche un lien stylise avec un etat actif visuel. Utilise dans la sidebar.
+
+## Apercu
+
+<Canvas of={DsNavItemStories.Default} />
+
+## Etat actif
+
+<Canvas of={DsNavItemStories.Active} />
+
+## Avec href
+
+<Canvas of={DsNavItemStories.WithHref} />
+
+## Props
+
+<ArgTypes of={DsNavItemStories} />
+
+## Utilisation
+
+```vue
+<DsNavItem label="Accueil" href="#accueil" :active="true" />
+```
+
+## Accessibilite
+
+- Utilise une balise `<a>` native pour la navigation clavier.
+- L'etat actif est indique visuellement par une couleur et un poids de police differents.
+
+## Guidelines
+
+- **Do** : Utiliser `active` pour indiquer la section courante.
+- **Don't** : Ne pas utiliser `DsNavItem` comme bouton d'action.

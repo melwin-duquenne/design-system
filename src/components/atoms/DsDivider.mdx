@@ -1,0 +1,38 @@
+import { Meta, Canvas, Controls, ArgTypes } from '@storybook/addon-docs/blocks'
+import * as DsDividerStories from './DsDivider.stories'
+
+<Meta of={DsDividerStories} />
+
+# DsDivider
+
+Separateur visuel horizontal ou vertical. Utilise le token `color-border-default`.
+
+## Apercu
+
+<Canvas of={DsDividerStories.Horizontal} />
+
+## Props
+
+<ArgTypes of={DsDividerStories} />
+
+## Directions
+
+### Horizontal
+
+<Canvas of={DsDividerStories.Horizontal} />
+
+### Vertical
+
+<Canvas of={DsDividerStories.Vertical} />
+
+## Accessibilite
+
+- Utilise `role="separator"` pour indiquer la separation aux technologies d'assistance.
+- L'element HTML `<hr>` est semantiquement correct pour les separateurs.
+
+## Guidelines
+
+| Do | Don't |
+|---|---|
+| Utiliser pour separer des sections de contenu | Utiliser pour un espacement simple (utiliser les tokens de spacing) |
+| Utiliser `vertical` entre des elements en ligne | Imbriquer des dividers |

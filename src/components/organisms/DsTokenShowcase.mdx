@@ -1,0 +1,38 @@
+import { Meta, Canvas, Controls, ArgTypes } from '@storybook/addon-docs/blocks'
+import * as DsTokenShowcaseStories from './DsTokenShowcase.stories'
+
+<Meta of={DsTokenShowcaseStories} />
+
+# DsTokenShowcase
+
+Section de presentation de design tokens. Combine un titre `DsTypography` et une `DsCard` pour encapsuler le contenu.
+
+## Apercu
+
+<Canvas of={DsTokenShowcaseStories.Default} />
+
+## Avec contenu
+
+<Canvas of={DsTokenShowcaseStories.WithContent} />
+
+## Props
+
+<ArgTypes of={DsTokenShowcaseStories} />
+
+## Utilisation
+
+```vue
+<DsTokenShowcase title="Couleurs">
+  <!-- Swatches de couleurs -->
+</DsTokenShowcase>
+```
+
+## Accessibilite
+
+- Utilise la balise semantique `<section>`.
+- Le titre est rendu en `<h2>`.
+
+## Guidelines
+
+- **Do** : Utiliser pour documenter visuellement les tokens du design system.
+- **Don't** : Ne pas utiliser pour du contenu non lie aux tokens.

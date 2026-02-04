@@ -1,0 +1,49 @@
+import { Meta, Canvas, Controls, ArgTypes } from '@storybook/addon-docs/blocks'
+import * as DsAlertStories from './DsAlert.stories'
+
+<Meta of={DsAlertStories} />
+
+# DsAlert
+
+Message contextuel pour informer l'utilisateur. Disponible en 4 variantes : `info`, `success`, `warning`, `error`. Peut etre rendu fermable.
+
+## Apercu
+
+<Canvas of={DsAlertStories.Info} />
+
+## Variantes
+
+### Success
+<Canvas of={DsAlertStories.Success} />
+
+### Warning
+<Canvas of={DsAlertStories.Warning} />
+
+### Error
+<Canvas of={DsAlertStories.Error} />
+
+### Fermable
+<Canvas of={DsAlertStories.Closable} />
+
+## Props
+
+<ArgTypes of={DsAlertStories} />
+
+## Utilisation
+
+```vue
+<DsAlert variant="success" closable>
+  Operation reussie !
+</DsAlert>
+```
+
+## Accessibilite
+
+- Le bouton de fermeture dispose d'un `aria-label="Fermer"`.
+- Chaque variante affiche une icone distinctive pour ne pas dependre uniquement de la couleur.
+
+## Guidelines
+
+- **Do** : Utiliser la variante adaptee au contexte du message.
+- **Do** : Activer `closable` pour les messages non critiques.
+- **Don't** : Ne pas afficher plusieurs alertes empilees de meme type.

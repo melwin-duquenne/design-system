@@ -24,11 +24,11 @@ defineProps<{
 
 .ds-badge--primary {
   background-color: var(--color-action-primary);
-  color: var(--color-neutral-white);
+  color: var(--color-neutral-900);
 }
 
 .ds-badge--secondary {
-  background-color: var(--color-action-secondary);
+  background-color: var(--color-action-accessible-secondary);
   color: var(--color-neutral-white);
 }
 
@@ -39,21 +39,21 @@ defineProps<{
 
 .ds-badge--success {
   background-color: var(--color-success);
-  color: var(--color-neutral-white);
+  color: var(--color-neutral-900);
 }
 
 .ds-badge--warning {
   background-color: var(--color-warning);
-  color: var(--color-neutral-800);
+  color: var(--color-neutral-900);
 }
 
 .ds-badge--error {
   background-color: var(--color-error);
-  color: var(--color-neutral-white);
+  color: var(--color-neutral-900);
 }
 
 .ds-badge--info {
-  background-color: var(--color-info);
+  background-color: var(--color-action-accessible-secondary);
   color: var(--color-neutral-white);
 }
 </style>

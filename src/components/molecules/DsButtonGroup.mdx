@@ -1,0 +1,35 @@
+import { Meta, Canvas, Controls, ArgTypes } from '@storybook/addon-docs/blocks'
+import * as DsButtonGroupStories from './DsButtonGroup.stories'
+
+<Meta of={DsButtonGroupStories} />
+
+# DsButtonGroup
+
+Groupe de boutons adjacents avec bordures arrondies uniquement sur les extremites. Les boutons internes ont un `border-radius: 0`.
+
+## Apercu
+
+<Canvas of={DsButtonGroupStories.Default} />
+
+## Plusieurs boutons
+
+<Canvas of={DsButtonGroupStories.MultipleButtons} />
+
+## Utilisation
+
+```vue
+<DsButtonGroup>
+  <DsButton variant="primary">Gauche</DsButton>
+  <DsButton variant="secondary">Centre</DsButton>
+  <DsButton variant="outline">Droite</DsButton>
+</DsButtonGroup>
+```
+
+## Accessibilite
+
+- Enveloppez le groupe dans un `role="group"` avec `aria-label` si le contexte l'exige.
+
+## Guidelines
+
+- **Do** : Regrouper des actions liees (ex: alignement texte, modes de vue).
+- **Don't** : Ne pas melanger des actions sans rapport dans un meme groupe.

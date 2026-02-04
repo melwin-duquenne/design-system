@@ -1,0 +1,39 @@
+import { Meta, Canvas, Controls, ArgTypes } from '@storybook/addon-docs/blocks'
+import * as DsSidebarStories from './DsSidebar.stories'
+
+<Meta of={DsSidebarStories} />
+
+# DsSidebar
+
+Barre laterale de navigation sticky. Affiche des `DsNavItem` et surligne la section active via `IntersectionObserver`.
+
+## Apercu
+
+<Canvas of={DsSidebarStories.Default} />
+
+## Avec plusieurs sections
+
+<Canvas of={DsSidebarStories.WithSections} />
+
+## Props
+
+<ArgTypes of={DsSidebarStories} />
+
+## Utilisation
+
+```vue
+<DsSidebar :sections="[
+  { id: 'colors', label: 'Couleurs' },
+  { id: 'typography', label: 'Typographie' },
+]" />
+```
+
+## Accessibilite
+
+- Utilise la balise semantique `<nav>`.
+- La section active est visuellement distinguee par couleur et poids de police.
+
+## Guidelines
+
+- **Do** : Fournir des `id` correspondant aux sections de la page.
+- **Don't** : Ne pas utiliser la sidebar sans contenu scrollable associe.

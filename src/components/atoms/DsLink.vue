@@ -31,10 +31,10 @@ defineProps<{
 }
 
 .ds-link--primary {
-  color: var(--color-action-primary);
+  color: var(--color-action-text-primary);
 }
 
 .ds-link--secondary {
-  color: var(--color-action-secondary);
+  color: var(--color-action-text-secondary);
 }
 </style>

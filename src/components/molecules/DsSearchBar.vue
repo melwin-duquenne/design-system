@@ -18,6 +18,7 @@ const emit = defineEmits<{
     <DsInput
       :placeholder="placeholder ?? 'Rechercher...'"
       :model-value="modelValue"
+      aria-label="Recherche"
       @update:model-value="emit('update:modelValue', $event)"
       @keyup.enter="emit('search')"
     />

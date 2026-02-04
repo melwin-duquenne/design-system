@@ -1,0 +1,46 @@
+import { Meta, Canvas, Controls, ArgTypes } from '@storybook/addon-docs/blocks'
+import * as DsToggleStories from './DsToggle.stories'
+
+<Meta of={DsToggleStories} />
+
+# DsToggle
+
+Interrupteur binaire (toggle switch). Supporte `v-model` pour le binding bidirectionnel.
+
+## Apercu
+
+<Canvas of={DsToggleStories.Default} />
+
+## Props
+
+<ArgTypes of={DsToggleStories} />
+
+## Etats
+
+### Desactive (off)
+
+<Canvas of={DsToggleStories.Default} />
+
+### Active (on)
+
+<Canvas of={DsToggleStories.Checked} />
+
+### Interactif
+
+Cliquez pour tester le toggle en action.
+
+<Canvas of={DsToggleStories.Interactive} />
+
+## Accessibilite
+
+- Utilise `role="switch"` et `aria-checked` pour une semantique correcte.
+- Accessible au clavier via l'element `<button>` natif.
+- L'animation du thumb offre un retour visuel clair.
+
+## Guidelines
+
+| Do | Don't |
+|---|---|
+| Utiliser pour des preferences on/off (ex: theme sombre) | Utiliser pour des choix multiples (preferer des checkboxes) |
+| Associer un label textuel visible | Laisser le toggle sans contexte |
+| Fournir un retour immediat a l'action | Utiliser pour des actions necessitant une confirmation |

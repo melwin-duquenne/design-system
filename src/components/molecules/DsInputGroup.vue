@@ -15,7 +15,7 @@ const model = defineModel<string>()
     <DsTypography as="body-sm" weight="medium" class="ds-input-group__label">
       {{ label }}
     </DsTypography>
-    <DsInput :placeholder="placeholder" v-model="model" />
+    <DsInput :placeholder="placeholder" :aria-label="label" v-model="model" />
   </div>
 </template>
 

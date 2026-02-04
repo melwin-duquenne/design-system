@@ -1,0 +1,51 @@
+import { Meta, Canvas, Controls, ArgTypes } from '@storybook/addon-docs/blocks'
+import * as DsAvatarStories from './DsAvatar.stories'
+
+<Meta of={DsAvatarStories} />
+
+# DsAvatar
+
+Avatar circulaire pour representer un utilisateur. Affiche une image, des initiales ou un caractere de fallback.
+
+## Apercu
+
+<Canvas of={DsAvatarStories.WithInitials} />
+
+## Props
+
+<ArgTypes of={DsAvatarStories} />
+
+## Variantes
+
+### Avec image
+
+<Canvas of={DsAvatarStories.WithImage} />
+
+### Avec initiales
+
+<Canvas of={DsAvatarStories.WithInitials} />
+
+### Fallback (aucune props)
+
+Affiche "?" par defaut.
+
+<Canvas of={DsAvatarStories.Fallback} />
+
+## Tailles
+
+<Canvas of={DsAvatarStories.Small} />
+<Canvas of={DsAvatarStories.Medium} />
+<Canvas of={DsAvatarStories.Large} />
+
+## Accessibilite
+
+- L'image utilise `alt=""` (decorative) car le nom doit etre fourni par le contexte environnant.
+- Le composant utilise `overflow: hidden` et `border-radius: full` pour le masquage circulaire.
+
+## Guidelines
+
+| Do | Don't |
+|---|---|
+| Fournir `initials` comme fallback quand `src` peut echouer | Laisser uniquement le "?" en production |
+| Utiliser la taille adaptee au contexte (sm pour listes, lg pour profils) | Utiliser la meme taille partout |
+| Utiliser des images carrees ou avec ratio 1:1 | Utiliser des images rectangulaires |

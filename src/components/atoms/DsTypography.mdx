@@ -1,0 +1,47 @@
+import { Meta, Canvas, Controls, ArgTypes } from '@storybook/addon-docs/blocks'
+import * as DsTypographyStories from './DsTypography.stories'
+
+<Meta of={DsTypographyStories} />
+
+# DsTypography
+
+Composant de typographie du Design System. Rend des balises semantiques (`h1`, `h2`, `p`) selon la prop `as`.
+
+## Apercu
+
+<Canvas of={DsTypographyStories.H1} />
+
+## Props
+
+<ArgTypes of={DsTypographyStories} />
+
+## Styles typographiques
+
+### Headings
+
+<Canvas of={DsTypographyStories.H1} />
+<Canvas of={DsTypographyStories.H2} />
+
+### Body
+
+<Canvas of={DsTypographyStories.BodyMd} />
+<Canvas of={DsTypographyStories.BodySm} />
+
+## Graisses
+
+<Canvas of={DsTypographyStories.WeightRegular} />
+<Canvas of={DsTypographyStories.WeightMedium} />
+<Canvas of={DsTypographyStories.WeightBold} />
+
+## Accessibilite
+
+- Les balises HTML semantiques sont generees automatiquement : `h1`, `h2` pour les titres, `p` pour le body.
+- Respecter la hierarchie des titres (ne pas sauter de niveau).
+
+## Guidelines
+
+| Do | Don't |
+|---|---|
+| Utiliser `h1` pour le titre principal de la page | Avoir plusieurs `h1` sur une meme page |
+| Utiliser `weight` pour varier la graisse sans changer le niveau semantique | Utiliser `h2` pour le style visuel sans respecter la hierarchie |
+| Utiliser `body-sm` pour les textes secondaires | Utiliser une taille de police personnalisee en dehors du systeme |

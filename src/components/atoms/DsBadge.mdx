@@ -1,0 +1,48 @@
+import { Meta, Canvas, Controls, ArgTypes } from '@storybook/addon-docs/blocks'
+import * as DsBadgeStories from './DsBadge.stories'
+
+<Meta of={DsBadgeStories} />
+
+# DsBadge
+
+Badge inline pour afficher un statut, une categorie ou un label. Disponible en 7 variantes de couleurs.
+
+## Apercu
+
+<Canvas of={DsBadgeStories.Primary} />
+
+## Props
+
+<ArgTypes of={DsBadgeStories} />
+
+## Variantes
+
+### Primary & Secondary
+
+<Canvas of={DsBadgeStories.Primary} />
+<Canvas of={DsBadgeStories.Secondary} />
+
+### Neutral
+
+<Canvas of={DsBadgeStories.Neutral} />
+
+### Statuts
+
+<Canvas of={DsBadgeStories.Success} />
+<Canvas of={DsBadgeStories.Warning} />
+<Canvas of={DsBadgeStories.Error} />
+<Canvas of={DsBadgeStories.Info} />
+
+## Accessibilite
+
+- Utilise un `<span>` avec un style `inline-flex`.
+- Le contraste de couleur est assure par les tokens du Design System.
+- Pour le badge `warning`, le texte est fonce pour garantir la lisibilite.
+
+## Guidelines
+
+| Do | Don't |
+|---|---|
+| Utiliser des textes courts (1-2 mots) | Mettre des phrases entieres dans un badge |
+| Utiliser la variante semantique adaptee | Utiliser `error` pour un statut de succes |
+| Utiliser `neutral` pour les informations non critiques | Surcharger l'interface de badges colores |

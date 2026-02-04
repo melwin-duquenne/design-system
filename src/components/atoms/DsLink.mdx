@@ -1,0 +1,40 @@
+import { Meta, Canvas, Controls, ArgTypes } from '@storybook/addon-docs/blocks'
+import * as DsLinkStories from './DsLink.stories'
+
+<Meta of={DsLinkStories} />
+
+# DsLink
+
+Lien textuel du Design System. Supporte deux variantes : `primary` (orange) et `secondary` (bleu).
+
+## Apercu
+
+<Canvas of={DsLinkStories.Primary} />
+
+## Props
+
+<ArgTypes of={DsLinkStories} />
+
+## Variantes
+
+### Primary
+
+<Canvas of={DsLinkStories.Primary} />
+
+### Secondary
+
+<Canvas of={DsLinkStories.Secondary} />
+
+## Accessibilite
+
+- Utilise l'element natif `<a>` avec un `href` obligatoire.
+- Le soulignement apparait au survol pour indiquer l'interactivite.
+- S'assurer que le texte du lien est descriptif (eviter "cliquez ici").
+
+## Guidelines
+
+| Do | Don't |
+|---|---|
+| Utiliser `primary` pour les liens d'action | Utiliser un lien quand un bouton serait plus adapte |
+| Fournir un texte de lien descriptif | Ecrire "cliquez ici" ou "en savoir plus" sans contexte |
+| Utiliser `secondary` pour les liens moins importants | Melanger les variantes dans un meme bloc de texte |

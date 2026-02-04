@@ -11,13 +11,32 @@
 			}
 		},
 		"action": {
+			"text": {
+				"primary": {
+					"$type": "color",
+					"$value": "{color.brand.orange.50}",
+					"$description": ""
+				},
+				"secondary": {
+					"$type": "color",
+					"$value": "{color.brand.blue.50}",
+					"$description": ""
+				}
+			},
 			"primary": {
 				"$type": "color",
-				"$value": "{color.brand.orange}"
+				"$value": "{color.brand.orange.50}"
 			},
 			"secondary": {
 				"$type": "color",
-				"$value": "{color.brand.blue}"
+				"$value": "{color.brand.blue.200}"
+			},
+			"accessible": {
+				"secondary": {
+					"$type": "color",
+					"$value": "{color.action.secondary}",
+					"$description": ""
+				}
 			}
 		},
 		"border": {

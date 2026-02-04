@@ -1,0 +1,45 @@
+import { Meta, Canvas, Controls, ArgTypes } from '@storybook/addon-docs/blocks'
+import * as DsInputStories from './DsInput.stories'
+
+<Meta of={DsInputStories} />
+
+# DsInput
+
+Champ de saisie texte. Supporte `v-model`, un placeholder et un etat desactive.
+
+## Apercu
+
+<Canvas of={DsInputStories.WithPlaceholder} />
+
+## Props
+
+<ArgTypes of={DsInputStories} />
+
+## Exemples
+
+### Placeholder
+
+<Canvas of={DsInputStories.WithPlaceholder} />
+
+### Avec une valeur
+
+<Canvas of={DsInputStories.WithValue} />
+
+### Desactive
+
+<Canvas of={DsInputStories.Disabled} />
+
+## Accessibilite
+
+- Utilise l'element natif `<input type="text">`.
+- La bordure change de couleur au focus pour indiquer l'etat actif.
+- L'etat `disabled` empeche la saisie et change l'apparence.
+- Associer un `<label>` via `DsInputGroup` pour l'accessibilite des formulaires.
+
+## Guidelines
+
+| Do | Don't |
+|---|---|
+| Toujours fournir un `placeholder` descriptif | Laisser le champ sans indication |
+| Utiliser `DsInputGroup` pour ajouter un label | Utiliser `DsInput` seul dans un formulaire |
+| Utiliser `disabled` pour les champs non editables | Cacher les champs avec du CSS |

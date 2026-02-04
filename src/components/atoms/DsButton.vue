@@ -41,11 +41,11 @@ defineProps<{
 /* Variants */
 .ds-button--primary {
   background-color: var(--color-action-primary);
-  color: var(--color-neutral-white);
+  color: var(--color-neutral-900);
 }
 
 .ds-button--secondary {
-  background-color: var(--color-action-secondary);
+  background-color: var(--color-action-accessible-secondary);
   color: var(--color-neutral-white);
 }
 

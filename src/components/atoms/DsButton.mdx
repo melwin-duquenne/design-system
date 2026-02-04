@@ -1,0 +1,60 @@
+import { Meta, Canvas, Controls, ArgTypes } from '@storybook/addon-docs/blocks'
+import * as DsButtonStories from './DsButton.stories'
+
+<Meta of={DsButtonStories} />
+
+# DsButton
+
+Bouton d'action principal du Design System. Supporte trois variantes visuelles et trois tailles.
+
+## Apercu
+
+<Canvas of={DsButtonStories.Default} />
+
+## Props
+
+<ArgTypes of={DsButtonStories} />
+
+## Variantes
+
+### Primary
+
+Utilise la couleur d'action principale (orange). A utiliser pour les actions principales.
+
+<Canvas of={DsButtonStories.Primary} />
+
+### Secondary
+
+Utilise la couleur d'action secondaire (bleu). Pour les actions secondaires.
+
+<Canvas of={DsButtonStories.Secondary} />
+
+### Outline
+
+Bouton avec bordure et fond transparent. Pour les actions tertiaires.
+
+<Canvas of={DsButtonStories.Outline} />
+
+## Tailles
+
+<Canvas of={DsButtonStories.Small} />
+<Canvas of={DsButtonStories.Medium} />
+<Canvas of={DsButtonStories.Large} />
+
+## Etat desactive
+
+<Canvas of={DsButtonStories.Disabled} />
+
+## Accessibilite
+
+- Utilise l'element natif `<button>`, accessible par defaut au clavier.
+- L'attribut `disabled` desactive le bouton et empeche les interactions.
+- Le curseur passe en `not-allowed` quand desactive.
+
+## Guidelines
+
+| Do | Don't |
+|---|---|
+| Utiliser `primary` pour l'action principale de la page | Mettre plusieurs boutons `primary` dans la meme section |
+| Utiliser un libelle court et explicite | Utiliser des libelles vagues comme "Cliquez ici" |
+| Choisir la taille adaptee au contexte | Melanger les tailles dans un meme groupe |

@@ -37,7 +37,7 @@ defineProps<{
 
 .ds-nav-item--active {
   background-color: var(--color-background-secondary);
-  color: var(--color-action-primary);
+  color: var(--color-action-text-primary);
   font-weight: var(--typography-weight-bold);
 }
 </style>

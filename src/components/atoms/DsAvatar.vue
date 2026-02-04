@@ -20,7 +20,7 @@ defineProps<{
   justify-content: center;
   border-radius: var(--radius-full);
   background-color: var(--color-action-primary);
-  color: var(--color-neutral-white);
+  color: var(--color-neutral-900);
   font-family: var(--typography-font-family-base), sans-serif;
   font-weight: var(--typography-weight-medium);
   overflow: hidden;

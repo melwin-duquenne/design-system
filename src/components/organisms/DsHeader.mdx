@@ -1,0 +1,28 @@
+import { Meta, Canvas, Controls, ArgTypes } from '@storybook/addon-docs/blocks'
+import * as DsHeaderStories from './DsHeader.stories'
+
+<Meta of={DsHeaderStories} />
+
+# DsHeader
+
+En-tete principal de l'application. Affiche le titre du Design System et le `DsThemeSwitch`.
+
+## Apercu
+
+<Canvas of={DsHeaderStories.Default} />
+
+## Utilisation
+
+```vue
+<DsHeader />
+```
+
+## Accessibilite
+
+- Utilise la balise semantique `<header>`.
+- Le titre est rendu en `<h1>` pour la hierarchie de la page.
+
+## Guidelines
+
+- **Do** : Placer le header en haut de la page, une seule fois.
+- **Don't** : Ne pas imbriquer un header dans un autre composant de layout.
