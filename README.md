@@ -1,8 +1,8 @@
 # Design System
 
-Design system Vue 3 + TypeScript avec pipeline de design tokens automatisé via Tokens Studio.
+Design system Vue 3 + TypeScript avec pipeline de design tokens automatise via Tokens Studio et documentation interactive Storybook.
 
-## Prérequis
+## Prerequisites
 
 - [Node.js](https://nodejs.org/) v20.19+ ou v22.12+
 - Un compte [Tokens Studio](https://tokens.studio/) avec une API key
@@ -21,29 +21,55 @@ TOKENS_STUDIO_API_KEY=votre_api_key
 
 ## Commandes
 
-### Developpement
+| Commande | Description |
+|----------|-------------|
+| `npm run dev` | Serveur de developpement Vite avec hot-reload |
+| `npm run build` | Type-check + compilation production dans `dist/` |
+| `npm run preview` | Sert le build de production en local |
+| `npm run storybook` | Lance Storybook en mode dev sur le port 6006 |
+| `npm run build-storybook` | Genere le site statique dans `storybook-static/` |
+| `npm run tokens:pull` | Recupere les tokens depuis Tokens Studio |
+| `npm run tokens:build` | Genere les fichiers CSS et TypeScript |
+| `npm run tokens:sync` | Pull + build en une seule commande |
+| `npx vitest --project storybook --run` | Lance les 68 tests d'accessibilite |
 
-```sh
-npm run dev
-```
+## Composants
 
-Lance le serveur de developpement Vite avec hot-reload.
+Le design system suit une architecture Atomic Design (19 composants) :
 
-### Build production
+### Atoms (9)
 
-```sh
-npm run build
-```
+| Composant | Description |
+|-----------|-------------|
+| `DsButton` | Bouton d'action (primary, secondary, outline) en 3 tailles |
+| `DsInput` | Champ de saisie texte avec `v-model` |
+| `DsBadge` | Badge inline en 7 variantes de couleur |
+| `DsAvatar` | Avatar circulaire (image, initiales, fallback) |
+| `DsTypography` | Typographie semantique (h1, h2, body-md, body-sm) |
+| `DsDivider` | Separateur horizontal ou vertical |
+| `DsLink` | Lien textuel (primary, secondary) |
+| `DsSpinner` | Indicateur de chargement anime en 3 tailles |
+| `DsToggle` | Interrupteur binaire avec `v-model` |
 
-Type-check + compilation pour la production dans `dist/`.
+### Molecules (7)
 
-### Preview du build
+| Composant | Description |
+|-----------|-------------|
+| `DsCard` | Conteneur avec ombre (sm, md, lg) |
+| `DsAlert` | Message contextuel (info, success, warning, error) fermable |
+| `DsButtonGroup` | Groupe de boutons adjacents |
+| `DsInputGroup` | Champ de saisie avec label |
+| `DsNavItem` | Element de navigation avec etat actif |
+| `DsSearchBar` | Barre de recherche (input + bouton) |
+| `DsThemeSwitch` | Interrupteur de theme clair/sombre |
 
-```sh
-npm run preview
-```
+### Organisms (3)
 
-Sert le build de production en local pour verification.
+| Composant | Description |
+|-----------|-------------|
+| `DsHeader` | En-tete avec titre et theme switch |
+| `DsSidebar` | Navigation laterale sticky avec IntersectionObserver |
+| `DsTokenShowcase` | Section de presentation de design tokens |
 
 ## Design Tokens
 
@@ -71,14 +97,6 @@ Tokens Studio (Figma)
     tokens-dark.ts        -> exports TypeScript (theme sombre)
 ```
 
-### Commandes tokens
-
-| Commande | Description |
-|----------|-------------|
-| `npm run tokens:pull` | Recupere les tokens depuis Tokens Studio |
-| `npm run tokens:build` | Genere les fichiers CSS et TypeScript |
-| `npm run tokens:sync` | Pull + build en une seule commande |
-
 ### Utilisation dans les composants
 
 Les variables CSS sont disponibles globalement :
@@ -100,6 +118,16 @@ Les tokens TypeScript peuvent etre importes :
 import { ColorTextPrimary, SpacingMd } from '@/tokens/tokens-light';
 ```
 
+### Tokens d'accessibilite
+
+Trois tokens garantissent un contraste WCAG AA (ratio >= 4.5:1) :
+
+| Token | Usage | Light | Dark |
+|-------|-------|-------|------|
+| `--color-action-text-primary` | Texte orange sur fond clair | `#c2410c` | `#fb923c` |
+| `--color-action-text-secondary` | Texte bleu sur fond clair | `#1d4ed8` | `#93c5fd` |
+| `--color-action-accessible-secondary` | Fond bleu avec texte blanc | `#2563eb` | `#3b82f6` |
+
 ### CI/CD
 
 Le workflow GitHub Actions (`.github/workflows/build-tokens.yml`) peut etre declenche :
@@ -111,18 +139,50 @@ Il pull les tokens, build les fichiers, et commit les changements automatiquemen
 
 > Le secret `TOKENS_STUDIO_API_KEY` doit etre configure dans les settings du repo GitHub (Settings > Secrets and variables > Actions).
 
+## Storybook
+
+La documentation interactive des composants est geree par [Storybook](https://storybook.js.org/) v10.
+
+Chaque composant possede :
+- Un fichier `.stories.ts` avec les variantes interactives
+- Un fichier `.mdx` avec la documentation (description, exemples, props, accessibilite, guidelines)
+- Une page **Design Tokens** documentant les couleurs, typographie, espacements, radius et ombres
+
+Fonctionnalites :
+- **Theme switching** : toolbar pour basculer entre light et dark
+- **Controles interactifs** : modification des props en temps reel via le panel Controls
+- **Tests d'accessibilite** : axe-core integre dans le panel Accessibility
+
+## Tests d'accessibilite
+
+Les tests a11y sont automatises via `@storybook/addon-a11y` + `@storybook/addon-vitest` avec [axe-core](https://github.com/dequelabs/axe-core). 68 tests couvrent l'ensemble des stories via Playwright (Chromium headless).
+
+- **Niveau** : `error` — les tests echouent en CI si une violation WCAG est detectee
+- **Regle desactivee** : `aria-prohibited-attr` (faux positif du au plugin vue-devtools)
+- Configuration dans `.storybook/preview.ts` (parametre `a11y`)
+
 ## Structure du projet
 
 ```
 design-system/
 ├── .github/workflows/    # CI/CD GitHub Actions
+├── .storybook/           # Configuration Storybook
+│   ├── main.ts           # Addons, framework, stories glob
+│   ├── preview.ts        # Theme switching, a11y, decorateurs
+│   ├── preview-head.html # Google Fonts (Roboto)
+│   └── vitest.setup.ts   # Setup tests a11y via portable stories
 ├── tokens/               # Tokens bruts (pull depuis Tokens Studio)
 │   ├── tokens/           # Token sets (color/, radius, spacing, etc.)
 │   ├── $themes.json      # Configuration des themes
 │   └── $metadata.json    # Metadonnees Tokens Studio
 ├── src/
-│   ├── assets/           # CSS globaux
-│   ├── components/       # Composants Vue
+│   ├── assets/           # CSS globaux (base.css)
+│   ├── components/
+│   │   ├── atoms/        # 9 composants + stories + MDX
+│   │   ├── molecules/    # 7 composants + stories + MDX
+│   │   ├── organisms/    # 3 composants + stories + MDX
+│   │   ├── pages/        # Page showcase
+│   │   └── DesignTokens.mdx  # Documentation des tokens
 │   └── tokens/           # Fichiers generes (ne pas editer)
 ├── sd.build.js           # Config Style Dictionary
 ├── .tokensstudio.json    # Config SDK Tokens Studio
